@@ -6,8 +6,14 @@
 .border {
   border: solid blueviolet;
 }
-h2{
-    color: brown;
+h2 {
+  color: chocolate;
+  font-size: 40px;
+}
+h1 {
+  color: chocolate;
+  font-weight: bold;
+  font-size: 70px;
 }
 img {
   width: 60%;
@@ -20,10 +26,10 @@ img {
 ul {
   list-style-type: none;
 }
-div{
-    align-content: center;
-    text-align: center;
-    background-color: beige;
+div {
+  align-content: center;
+  text-align: center;
+  /* background-color: beige; */
 }
 @media (max-width: 431px) {
   border {
@@ -31,11 +37,24 @@ div{
   }
   body {
     display: grid;
-    background-color: white;
     width: 100vw;
     grid-template-areas:
       "header"
       "section";
+  }
+  #redes {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center; /*secundario*/
+    align-content: center;
+    row-gap: 10px;
+  }
+  .child {
+    width: 150px;
+    height: 150px;
   }
   section {
     grid-area: section;
@@ -44,31 +63,56 @@ div{
     height: 100vh;
     background-color: chartreuse;
     grid-template-areas:
-      "imgPresent nombre"
-      "descrip habilidad"
-      "masInfo topo";
-    grid-template-rows: 30% 30% 30%;
-    grid-template-columns: 50% 50%;
+      "imgSection imgSection"
+      "nombre imgPresent"
+      "descrip descrip"
+      "habilidad puntos";
+    grid-template-rows: 150vw 100vw 130vw 100vw;
+    grid-template-columns: 50vh 50vh 100vh 50vh ;
   }
   header {
     grid-area: header;
   }
+
+  #imgSection {
+    grid-area: imgSection;
+  }
+
   #imgPresent {
     grid-area: imgPresent;
+    background-color: aliceblue;
+  }
+  .imgRadius {
+    border-radius: 40%;
   }
   #nombre {
     grid-area: nombre;
+    justify-content: space-evenly;
+    align-content: center;
+    background-color: aliceblue;
   }
   #descrip {
     grid-area: descrip;
-  }
-  #masInfo {
-    grid-area: masInfo;
+    font-size: 45px;
   }
   #habilidad {
     grid-area: habilidad;
+
   }
+  #puntos {
+    grid-area: puntos;
+    font-size: 40px;
+    text-align: left;
+  }
+  /* 
   #topo {
     grid-area: topo;
+  } */
+  #imgSection {
+    grid-area: imgSection;
+    background-image: url("/img/img_code.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
