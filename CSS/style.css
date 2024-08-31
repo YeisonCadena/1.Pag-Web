@@ -37,10 +37,13 @@ div {
   }
   body {
     display: grid;
-    width: 100vw;
+    width: 100%;
+    height: 400vh;
     grid-template-areas:
-      "header"
-      "section";
+      "inicio"
+      "skills";
+    grid-template-rows: 250vh 100vh;
+    grid-template-columns: auto 100%;
   }
   #redes {
     width: 100%;
@@ -52,23 +55,33 @@ div {
     align-content: center;
     row-gap: 10px;
   }
-  .child {
-    width: 150px;
-    height: 150px;
+  #lenguajes {
+    grid-area: lenguajes;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center; /*secundario*/
+    align-content: center;
   }
-  section {
-    grid-area: section;
+  .child {
+    width: 125px;
+    height: 125px;
+  }
+  #inicio {
+    grid-area: inicio;
     display: grid;
     width: 100%;
-    height: 100vh;
-    background-color: chartreuse;
+    height: 250vh;
     grid-template-areas:
       "imgSection imgSection"
       "nombre imgPresent"
       "descrip descrip"
       "habilidad puntos";
-    grid-template-rows: 150vw 100vw 130vw 100vw;
-    grid-template-columns: 50vh 50vh 100vh 50vh ;
+    grid-template-rows: 50vh 45vh 100vh 55vh;
+    grid-template-columns: 50% 50% 50% 50%;
   }
   header {
     grid-area: header;
@@ -97,22 +110,32 @@ div {
   }
   #habilidad {
     grid-area: habilidad;
-
   }
   #puntos {
     grid-area: puntos;
     font-size: 40px;
     text-align: left;
   }
-  /* 
-  #topo {
-    grid-area: topo;
-  } */
+
   #imgSection {
     grid-area: imgSection;
     background-image: url("/img/img_code.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+  }
+  #skills {
+    grid-area: skills;
+    display: grid;
+    width: 100%;
+    grid-template-areas: 
+    "programar"
+    "lenguajes";
+    grid-template-rows: 50vh;
+    grid-template-columns: 100%;
+  }
+  #programar {
+    font-size: 35px;
+    grid-area: programar;
   }
 }
