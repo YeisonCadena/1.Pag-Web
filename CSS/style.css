@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.border {
+  border: solid blueviolet;
+}
+h2{
+    color: brown;
+}
+img {
+  width: 60%;
+  height: 60%;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+ul {
+  list-style-type: none;
+}
+div{
+    align-content: center;
+    text-align: center;
+    background-color: beige;
+}
+@media (max-width: 431px) {
+  border {
+    border: solid black;
+  }
+  body {
+    display: grid;
+    background-color: white;
+    width: 100vw;
+    grid-template-areas:
+      "header"
+      "section";
+  }
+  section {
+    grid-area: section;
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    background-color: chartreuse;
+    grid-template-areas:
+      "imgPresent nombre"
+      "descrip habilidad"
+      "masInfo topo";
+    grid-template-rows: 30% 30% 30%;
+    grid-template-columns: 50% 50%;
+  }
+  header {
+    grid-area: header;
+  }
+  #imgPresent {
+    grid-area: imgPresent;
+  }
+  #nombre {
+    grid-area: nombre;
+  }
+  #descrip {
+    grid-area: descrip;
+  }
+  #masInfo {
+    grid-area: masInfo;
+  }
+  #habilidad {
+    grid-area: habilidad;
+  }
+  #topo {
+    grid-area: topo;
+  }
+}
