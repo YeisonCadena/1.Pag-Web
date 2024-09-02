@@ -38,7 +38,7 @@ div {
   body {
     display: grid;
     width: 100%;
-    height: 400vh;
+    height: 800vh;
     grid-template-areas:
       "inicio"
       "skills";
@@ -128,14 +128,63 @@ div {
     grid-area: skills;
     display: grid;
     width: 100%;
-    grid-template-areas: 
-    "programar"
-    "lenguajes";
+    grid-template-areas:
+      "programar"
+      "lenguajes"
+      "intereses";
     grid-template-rows: 50vh;
     grid-template-columns: 100%;
   }
   #programar {
     font-size: 35px;
     grid-area: programar;
+  }
+  #intereses {
+    grid-area: intereses;
+    display: grid;
+    width: 100%;
+    height: 125vh;
+    grid-template-areas:
+      "titIntereses titIntereses"
+      "titTec contTec"
+      "titCine contCine"
+      "titJuegos contJuegos"
+      "duelo duelo";
+    grid-template-rows: 30vh 30vh;
+    grid-template-columns: 50% 50%;
+  }
+  #intereses h3 {
+    color: blueviolet;
+    font-size: 30px;
+  }
+  #intereses p {
+    font-size: 20px;
+  }
+  #titIntereses {
+    grid-area: titIntereses;
+  }
+  #titIntereses h2 {
+    font-size: 50px;
+  }
+  #titTec {
+    grid-area: titTec;
+  }
+  #contTec {
+    grid-area: contTec;
+  }
+  #titCine {
+    grid-area: titCine;
+  }
+  #contCine {
+    grid-area: contCine;
+  }
+  #titJuegos {
+    grid-area: titJuegos;
+  }
+  #contJuegos {
+    grid-area: contJuegos;
+  }
+  #duelo {
+    grid-area: duelo;
   }
 }
