@@ -32,17 +32,22 @@ div {
   /* background-color: beige; */
 }
 @media (max-width: 431px) {
+  a {
+    cursor: pointer;
+  }
+
   border {
     border: solid black;
   }
   body {
     display: grid;
     width: 100%;
-    height: 800vh;
+    height: 900vh;
     grid-template-areas:
       "inicio"
-      "skills";
-    grid-template-rows: 250vh 100vh;
+      "skills"
+      "portafolio";
+    grid-template-rows: 250vh 135vh 310vh;
     grid-template-columns: auto 100%;
   }
   #redes {
@@ -70,6 +75,7 @@ div {
     width: 125px;
     height: 125px;
   }
+
   #inicio {
     grid-area: inicio;
     display: grid;
@@ -131,7 +137,8 @@ div {
     grid-template-areas:
       "programar"
       "lenguajes"
-      "intereses";
+      "intereses"
+      "portafolio";
     grid-template-rows: 50vh;
     grid-template-columns: 100%;
   }
@@ -143,7 +150,7 @@ div {
     grid-area: intereses;
     display: grid;
     width: 100%;
-    height: 125vh;
+    height: 135vh;
     grid-template-areas:
       "titIntereses titIntereses"
       "titTec contTec"
@@ -186,5 +193,51 @@ div {
   }
   #duelo {
     grid-area: duelo;
+  }
+  #diseno1 img,
+  #diseno2 img,
+  #diseno3 img {
+    width: 150vw;
+    height: 50vh;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #portafolio {
+    background-color: azure;
+    grid-area: portafolio;
+    width: 100%;
+    height: 310vh;
+    display: grid;
+    grid-template-areas:
+      "titPortafolio"
+      "contDiseno1"
+      "diseno1"
+      "contDiseno2"
+      "diseno2"
+      "contDiseno3"
+      "diseno3";
+    grid-template-rows: 10vh 50vh 50vh 50vh 50vh 50vh 50vh;
+    grid-template-columns: 100%;
+    font-size: 30px;
+  }
+  #diseno1 {
+    grid-area: diseno1;
+  }
+  #diseno2 {
+    grid-area: diseno2;
+  }
+  #diseno3 {
+    grid-area: diseno3;
+  }
+  #contDiseno1 {
+    grid-area: contDiseno1;
+  }
+  #contDiseno2 {
+    grid-area: contDiseno2;
+  }
+  #contDiseno3 {
+    grid-area: contDiseno3;
   }
 }
