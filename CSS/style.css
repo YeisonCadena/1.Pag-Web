@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 .border {
-  border: solid blueviolet;
+  border: solid bisque;
 }
 h2 {
   color: chocolate;
@@ -44,12 +44,15 @@ div {
     width: 100%;
     height: 900vh;
     grid-template-areas:
-      "inicio"
-      "skills"
-      "portafolio";
-    grid-template-rows: 250vh 135vh 310vh;
+    "header"
+    "inicio"
+    "skills"
+    "portafolio";
+    grid-template-rows: 5vh 250vh 135vh 310vh;
     grid-template-columns: auto 100%;
+    
   }
+  
   #redes {
     width: 100%;
     display: flex;
@@ -75,24 +78,62 @@ div {
     width: 125px;
     height: 125px;
   }
-
+  
   #inicio {
     grid-area: inicio;
     display: grid;
     width: 100%;
     height: 250vh;
     grid-template-areas:
-      "imgSection imgSection"
-      "nombre imgPresent"
-      "descrip descrip"
-      "habilidad puntos";
+    "imgSection imgSection"
+    "nombre imgPresent"
+    "descrip descrip"
+    "habilidad puntos";
     grid-template-rows: 50vh 45vh 100vh 55vh;
     grid-template-columns: 50% 50% 50% 50%;
   }
-  header {
-    grid-area: header;
+  
+  #usuario{
+    grid-area: usuario;
+    width: 5vh;
+    height: 5vh;
   }
-
+  
+  #inic{
+    grid-area: inic;
+    width: 5vh;
+    height: 5vh;
+  }
+  
+  #final{
+    grid-area: final;
+    width: 5vh;
+    height: 5vh;
+  }
+  #titHeader{
+    grid-area: titHeader;
+    width: 40vh;
+    height: 5vh;
+  }
+  #titH{
+    color: white;
+  }
+  #header img{
+    width: 5vh;
+    height: 5vh;
+  }
+  header {
+    background-color: bisque;
+    grid-area: header;
+    display: grid;
+    width: 100%;
+    height: 5vh;
+    grid-template-areas: 
+    "usuario titHeader inic final";
+    position: fixed;
+    grid-template-columns: 20% 60% 10% 10%;
+  }
+  
   #imgSection {
     grid-area: imgSection;
   }
@@ -150,14 +191,14 @@ div {
     grid-area: intereses;
     display: grid;
     width: 100%;
-    height: 135vh;
+    height: 140vh;
     grid-template-areas:
       "titIntereses titIntereses"
       "titTec contTec"
       "titCine contCine"
       "titJuegos contJuegos"
       "duelo duelo";
-    grid-template-rows: 30vh 30vh;
+    grid-template-rows: 10vh 30vh 30vh 30vh 40vh;
     grid-template-columns: 50% 50%;
   }
   #intereses h3 {
