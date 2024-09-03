@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Pagina Personal</title>
     <link rel="stylesheet" href="/CSS/style.css" />
   </head>
   <body>
@@ -17,7 +17,7 @@
       <div id="titHeader"><h2>Pagina Personal</h2>
       </div>
       <div id="inic">
-        <a href=#usuario>
+        <a href="#header">
           <img
           src="/img/icon_subir.gif"
           alt="imagen de presentación"
@@ -25,7 +25,7 @@
         </a>
       </div>
       <div id="final">
-        <a href=#diseño3>
+        <a href="#footer">
           <img
           src="/img/icon_flecha-hacia-abajo.gif"
           alt="imagen de presentación"
@@ -203,48 +203,70 @@
           /></a>
         </div>
       </div>
-      <div class="border" id="portafolio">
-        <div id="titPortafolio"><h2>Portafolio</h2></div>
-        <div id="contDiseno1">
-              <div ><h2>Pagina Web de un Menú</h2></div>
-              <div><p>
-                Yeison desarrolló una página web que presenta un menú utilizando listas, posicionamiento CSS y la propiedad 
-                'display: inline-block'. Este enfoque le permitió crear un diseno limpio y organizado, 
-                con elementos del menú alineados de manera horizontal, manteniendo la flexibilidad y facilidad de navegación.
-              </p></div>
-        </div>
-        <div class="border" id="diseno1">
-          <a href="https://github.com/YeisonCadena/ProyectosWeb/tree/main/menu">
-            <img src="/img/diseño1.jpg" alt="diseno 1" />
-          </a>
-        </div>
-        <div class="border" id="diseno2">
-          <a href="https://github.com/YeisonCadena/ProyectosWeb/tree/main/nike">
-            <img src="/img/diseño2.png" alt="diseno 2" />
-          </a>
-        </div>
-        <div id="contDiseno2">
-          <div><h2>Pagina Web de Nike</h2></div>
-          <div><p>
-            Yeison desarrolló una página web para Nike utilizando HTML y CSS, donde aplicó `display: flex` para crear un diseno 
-                fluido y adaptable. También combinó diversas técnicas de posicionamiento (`position`) para lograr una estructura precisa
-                y visualmente atractiva, reflejando la identidad de la marca con un enfoque moderno y funcional.
-              </p></div>
-            </div>
-            <div id="contDiseno3">
-              <div><h2>Pagina Web de Media</h2></div>
-              <div><p>Yeison desarrolló una página web de diseno responsivo utilizando HTML y CSS, implementando `display: grid` para organizar 
-                el contenido de manera estructurada. Combinó técnicas de posicionamiento (`position`) y ajustó el diseno mediante media queries
-                para que se adapte perfectamente a dispositivos móviles, tabletas y PCs, asegurando una experiencia de usuario fluida en cualquier pantalla.</p></div>
-              </div>
-              <div class="border" id="diseno3">
-                <a href="https://github.com/YeisonCadena/ProyectosWeb/tree/main/pantallas">
-                  <img  src="/img/diseño3.jpg" alt="diseno 3" />
-                </a>
-              </div>
-        
-      </div>
     </section>
+    <section class="border" id="portafolio">
+      <div id="titPortafolio"><h2>Portafolio</h2></div>
+      <div id="contDiseno1">
+            <div ><h2>Pagina Web de un Menú</h2></div>
+            <div><p>
+              Yeison desarrolló una página web que presenta un menú utilizando listas, posicionamiento CSS y la propiedad 
+              'display: inline-block'. Este enfoque le permitió crear un diseno limpio y organizado, 
+              con elementos del menú alineados de manera horizontal, manteniendo la flexibilidad y facilidad de navegación.
+            </p></div>
+      </div>
+      <div class="border" id="diseno1">
+        <a href="https://github.com/YeisonCadena/ProyectosWeb/tree/main/menu">
+          <img src="/img/diseño1.jpg" alt="diseno 1" />
+        </a>
+      </div>
+      <div class="border" id="diseno2">
+        <a href="https://github.com/YeisonCadena/ProyectosWeb/tree/main/nike">
+          <img src="/img/diseño2.png" alt="diseno 2" />
+        </a>
+      </div>
+      <div id="contDiseno2">
+        <div><h2>Pagina Web de Nike</h2></div>
+        <div><p>
+          Yeison desarrolló una página web para Nike utilizando HTML y CSS, donde aplicó `display: flex` para crear un diseno 
+              fluido y adaptable. También combinó diversas técnicas de posicionamiento (`position`) para lograr una estructura precisa
+              y visualmente atractiva, reflejando la identidad de la marca con un enfoque moderno y funcional.
+            </p></div>
+          </div>
+          <div id="contDiseno3">
+            <div><h2>Pagina Web de Media</h2></div>
+            <div><p>Yeison desarrolló una página web de diseno responsivo utilizando HTML y CSS, implementando `display: grid` para organizar 
+              el contenido de manera estructurada. Combinó técnicas de posicionamiento (`position`) y ajustó el diseno mediante media queries
+              para que se adapte perfectamente a dispositivos móviles, tabletas y PCs, asegurando una experiencia de usuario fluida en cualquier pantalla.</p></div>
+            </div>
+            <div class="border" id="diseno3">
+              <a href="https://github.com/YeisonCadena/ProyectosWeb/tree/main/pantallas">
+                <img  src="/img/diseño3.jpg" alt="diseno 3" />
+              </a>
+            </div>
+            <div id="fondo">
+              <h2>Solo sé que no se nada</h2>
+              <img src="/img/img_fondos-web.webp"></div>
+      
+    </section>
+    <footer class="border">
+      <nav class="footer-nav">
+        <div class="child3">
+          <a href="#header">Header</a>
+        </div>
+        <div class="child3">
+          <a href="#inicio">Inicio</a>
+        </div>
+        <div class="child3">
+          <a href="#skills">Skills</a>
+        </div>
+        <div class="child3">
+          <a href="#portafolio">Portafolio</a>
+        </div>
+        <div class="child3">
+          <a href="#footer">Footer</a>
+        </div>
+      </nav>
+  </footer>
     </body>
     </html>
     
