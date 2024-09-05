@@ -22,6 +22,323 @@ div {
   /* background-color: beige; */
 }
 
+a {
+  cursor: pointer;
+}
+h1 {
+  color: chocolate;
+  font-weight: bold;
+  font-size: 60px;
+}
+h2 {
+  color: chocolate;
+  font-size: 30px;
+}
+body {
+  display: grid;
+  background-color: aliceblue;
+  width: 100vw;
+  height: auto;
+  grid-template-areas:
+    "header"
+    "inicio"
+    "skills"
+    "portafolio"
+    "footer";
+  grid-template-rows: 5vh auto auto auto auto;
+  grid-template-columns: 100%;
+}
+
+#redes {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  row-gap: 10px;
+}
+
+#lenguajes {
+  grid-area: lenguajes;
+  background-color: aliceblue;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+}
+.child {
+  width: 20%;
+  height: auto;
+}
+
+#inicio {
+  grid-area: inicio;
+  background-color: aliceblue;
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-areas:
+    "imgSection imgSection"
+    "imgPresent nombre"
+    "descrip habilidad"
+    "descrip puntos"
+    ;
+  grid-template-rows: auto auto auto auto;
+  grid-template-columns: 50% 50%;
+}
+
+#usuario {
+  grid-area: usuario;
+  width: 5vh;
+  height: 5vh;
+}
+
+#inic {
+  grid-area: inic;
+  height: 5vh;
+}
+
+#final {
+  grid-area: final;
+  height: 5vh;
+}
+#titHeader {
+  grid-area: titHeader;
+  height: 5vh;
+}
+#titH {
+  color: white;
+}
+#header img {
+  height: 5vh;
+}
+header {
+  background-color: bisque;
+  grid-area: header;
+  display: grid;
+  width: 100%;
+  grid-template-areas: "usuario titHeader inic final";
+  position: fixed;
+  grid-template-columns: 20% 60% 10% 10%;
+}
+
+#imgSection {
+  width: 100%;
+  height: auto;
+  grid-area: imgSection;
+}
+
+#imgPresent {
+  width: 100%;
+  height: auto;
+  grid-area: imgPresent;
+  background-color: aliceblue;
+}
+#imgPresent img {
+  width: 40%;
+  height: auto;
+}
+.imgRadius {
+  border-radius: 40%;
+}
+#nombre {
+  width: 100%;
+  height: auto;
+  grid-area: nombre;
+  align-content: center;
+  background-color: aliceblue;
+}
+#descrip {
+  background-color: aliceblue;
+  grid-area: descrip;
+  font-size: 35px;
+}
+#habilidad {
+  background-color: aliceblue;
+  grid-area: habilidad;
+}
+#habilidad img {
+  width: 50%;
+}
+#puntos {
+  grid-area: puntos;
+  font-size: 35px;
+  text-align: left;
+}
+
+#imgSection {
+  grid-area: imgSection;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#imgSection img {
+  width: 100%;
+  height: 40vh;
+}
+
+#skills {
+  grid-area: skills;
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-areas:
+    "programar"
+    "lenguajes"
+    "intereses";
+  grid-template-rows: auto;
+  grid-template-columns: 100%;
+}
+
+#programar {
+  background-color: aliceblue;
+  font-size: 35px;
+  grid-area: programar;
+}
+#intereses {
+  grid-area: intereses;
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-areas:
+    "titIntereses titIntereses titIntereses titIntereses"
+    "titTec contTec titCine contCine"
+    "titJuegos contJuegos duelo duelo";
+  grid-template-rows: auto;
+  grid-template-columns: 25% ;
+}
+
+#intereses h3 {
+  color: blueviolet;
+  font-size: 30px;
+}
+#intereses p {
+  font-size: 20px;
+}
+#titIntereses {
+  grid-area: titIntereses;
+}
+#titIntereses h2 {
+  font-size: 50px;
+}
+#titTec {
+  grid-area: titTec;
+}
+#contTec {
+  grid-area: contTec;
+}
+#titCine {
+  grid-area: titCine;
+}
+#contCine {
+  grid-area: contCine;
+}
+#titJuegos {
+  grid-area: titJuegos;
+}
+#contJuegos {
+  grid-area: contJuegos;
+}
+#duelo {
+  grid-area: duelo;
+  font-size: 25px;
+}
+#duelo img {
+  height: 50vh;
+}
+#diseno1 img,
+#diseno2 img,
+#diseno3 img {
+  width: 50%;
+  height: 50vh;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#portafolio {
+  grid-area: portafolio;
+  /* background-color: azure; */
+  width: 100%;
+  display: grid;
+  grid-template-areas:
+    "titPortafolio titPortafolio"
+    "contDiseno1 contDiseno2"
+    "diseno1 diseno2"
+    "contDiseno3 fondo"
+    "diseno3 fondo";
+  grid-template-rows: auto auto;
+  grid-template-columns: 50% 50%;
+  font-size: 30px;
+}
+#fondo {
+  grid-area: fondo;
+}
+#fondo img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#titPortafolio {
+  grid-area: titPortafolio;
+  font-size: 25px;
+}
+
+#diseno1 {
+  grid-area: diseno1;
+}
+#diseno2 {
+  grid-area: diseno2;
+}
+#diseno3 {
+  grid-area: diseno3;
+}
+#contDiseno1 {
+  font-size: 15px;
+  grid-area: contDiseno1;
+}
+#contDiseno2 {
+  font-size: 15px;
+  grid-area: contDiseno2;
+}
+#contDiseno3 {
+  font-size: 15px;
+  grid-area: contDiseno3;
+}
+footer {
+  grid-area: footer;
+  position: static;
+  background-color: bisque;
+}
+.footer-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+}
+
+.child3 {
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.footer-nav a {
+  color: brown;
+  text-decoration: none;
+}
+
 @media (max-width: 1025px) {
   a {
     cursor: pointer;
@@ -37,15 +354,15 @@ div {
   }
   body {
     display: grid;
-    width: 100%;
-    height: 433vh;
+    width: 200vw;
+    height: auto;
     grid-template-areas:
       "header"
       "inicio"
       "skills"
       "portafolio"
       "footer";
-    grid-template-rows: 5vh 90vh 160vh 120vh 5vh;
+    grid-template-rows: 5vh auto auto auto auto;
     grid-template-columns: 100%;
   }
 
@@ -63,7 +380,7 @@ div {
   #lenguajes {
     grid-area: lenguajes;
     width: 100%;
-    height: 20vh;
+    height: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -72,8 +389,8 @@ div {
     align-content: center;
   }
   .child {
-    width: 125px;
-    height: 125px;
+    width: 20%;
+    height: auto;
   }
 
   #inicio {
@@ -81,13 +398,13 @@ div {
     background-color: aliceblue;
     display: grid;
     width: 100%;
-    height: 90vh;
+    height: auto;
     grid-template-areas:
       "imgSection imgSection"
       "nombre imgPresent"
       "descrip descrip"
       "habilidad puntos";
-    grid-template-rows: 15vh 25vh 25vh 25vh;
+    grid-template-rows: auto auto auto auto;
     grid-template-columns: 50% 50%;
   }
 
@@ -99,25 +416,21 @@ div {
 
   #inic {
     grid-area: inic;
-    width: 5vh;
     height: 5vh;
   }
 
   #final {
     grid-area: final;
-    width: 5vh;
     height: 5vh;
   }
   #titHeader {
     grid-area: titHeader;
-    width: 40vh;
     height: 5vh;
   }
   #titH {
     color: white;
   }
   #header img {
-    width: 5vh;
     height: 5vh;
   }
   header {
@@ -132,24 +445,26 @@ div {
 
   #imgSection {
     width: 100%;
+    height: auto;
     grid-area: imgSection;
   }
 
   #imgPresent {
     width: 100%;
-    height: 25vh;
+    height: auto;
     grid-area: imgPresent;
     background-color: aliceblue;
   }
   #imgPresent img {
-    width: 50%;
-    height: 20vh;
+    width: 60%;
+    height: auto;
   }
   .imgRadius {
     border-radius: 40%;
   }
   #nombre {
     width: 100%;
+    height: auto;
     grid-area: nombre;
     align-content: center;
     background-color: aliceblue;
@@ -174,20 +489,26 @@ div {
 
   #imgSection {
     grid-area: imgSection;
-    background-image: url("/img/img_code.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
+
+  #imgSection img {
+    width: 100%;
+    height: 40vh;
+  }
+
   #skills {
     grid-area: skills;
     display: grid;
     width: 100%;
+    height: auto;
     grid-template-areas:
       "programar"
       "lenguajes"
       "intereses";
-    grid-template-rows: 25vh 20vh 110vh;
+    grid-template-rows: auto;
     grid-template-columns: 100%;
   }
 
@@ -199,13 +520,14 @@ div {
     grid-area: intereses;
     display: grid;
     width: 100%;
+    height: auto;
     grid-template-areas:
       "titIntereses titIntereses"
       "titTec contTec"
       "titCine contCine"
       "titJuegos contJuegos"
       "duelo duelo";
-    grid-template-rows: 10vh 25vh 25vh 25vh 25vh;
+    grid-template-rows: auto auto;
     grid-template-columns: 50% 50%;
   }
 
@@ -244,14 +566,14 @@ div {
     grid-area: duelo;
     font-size: 25px;
   }
-  #duelo img{
-    height: 20vh;
+  #duelo img {
+    height: 50vh;
   }
   #diseno1 img,
   #diseno2 img,
   #diseno3 img {
-    width: 80%;
-    height: 20vh;
+    width: 60%;
+    height: auto;
     object-fit: cover;
     background-size: cover;
     background-position: center;
@@ -268,7 +590,7 @@ div {
       "contDiseno2 diseno2"
       "contDiseno3 diseno3"
       "fondo fondo";
-    grid-template-rows: 10vh 25vh 25vh 25vh 30vh;
+    grid-template-rows: auto auto;
     grid-template-columns: 50% 50%;
     font-size: 30px;
   }
@@ -277,7 +599,7 @@ div {
   }
   #fondo img {
     width: 100%;
-    height: 25vh;
+    height: 40vh;
     object-fit: cover;
     background-size: cover;
     background-position: center;
@@ -334,7 +656,7 @@ div {
   }
 }
 
-@media (max-width: 431px) {
+@media (max-width: 450px) {
   h1 {
     color: chocolate;
     font-weight: bold;
@@ -353,20 +675,22 @@ div {
   }
   body {
     display: grid;
-    width: 100%;
-    min-height: 1110vh;
+    width: 200vw;
+    height: auto;
+    background-color: azure;
     grid-template-areas:
       "header"
       "inicio"
       "skills"
       "portafolio"
       "footer";
-    grid-template-rows: 5vh 300vh 370vh 390vh auto;
+    grid-template-rows: 5vh auto auto auto auto;
     grid-template-columns: 100%;
   }
 
   #redes {
     width: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -378,7 +702,7 @@ div {
   #lenguajes {
     grid-area: lenguajes;
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -387,8 +711,8 @@ div {
     align-content: center;
   }
   .child {
-    width: 125px;
-    height: 125px;
+    width: 20%;
+    height: auto;
   }
 
   #imgSection {
@@ -403,8 +727,8 @@ div {
     /* background-color: aliceblue; */
   }
   #imgPresent img {
-    height: 200px;
-    width: 200px;
+    height: auto;
+    width: 50%;
   }
   .imgRadius {
     border-radius: 40%;
@@ -413,6 +737,7 @@ div {
     grid-area: nombre;
     background-color: azure;
     width: 100%;
+    height: auto;
     justify-content: space-evenly;
     align-content: center;
     /* background-color: aliceblue; */
@@ -436,7 +761,7 @@ div {
     background-color: azure;
     display: grid;
     width: 100%;
-    height: 300vh;
+    height: auto;
     grid-template-areas:
       "imgSection"
       "imgPresent"
@@ -444,41 +769,37 @@ div {
       "descrip"
       "habilidad"
       "puntos";
-    grid-template-rows: 50vh;
+    grid-template-rows: auto;
     grid-template-columns: 100%;
   }
 
   #usuario {
     grid-area: usuario;
-    width: 5vh;
     height: 5vh;
   }
 
   #inic {
     grid-area: inic;
-    width: 5vh;
     height: 5vh;
   }
 
   #final {
     grid-area: final;
-    width: 5vh;
     height: 5vh;
   }
   #titHeader {
     grid-area: titHeader;
     width: 100%;
-    height: 5vh;
+    height: 1rem;
   }
   #titH {
     color: white;
   }
   #header img {
-    width: 5vh;
     height: 5vh;
   }
   header {
-    background-color: whitesmoke;
+    background-color: bisque;
     grid-area: header;
     display: grid;
     width: 100%;
@@ -494,16 +815,21 @@ div {
     background-position: center;
     background-repeat: no-repeat;
   }
+  #imgSection img{
+    width: 100%;
+    height: auto;
+  }
   #skills {
     grid-area: skills;
     background-color: azure;
     display: grid;
     width: 100%;
+    height: auto;
     grid-template-areas:
       "programar"
       "lenguajes"
       "intereses";
-    grid-template-rows: 60vh 100vh 210vh;
+    grid-template-rows: auto;
     grid-template-columns: 100%;
   }
 
@@ -515,6 +841,7 @@ div {
     grid-area: intereses;
     display: grid;
     width: 100%;
+    height: auto;
     grid-template-areas:
       "titIntereses"
       "titTec"
@@ -524,7 +851,7 @@ div {
       "titJuegos"
       "contJuegos"
       "duelo";
-    grid-template-rows: 10vh 40vh 10vh 40vh 10vh 40vh 10vh 50vh;
+    grid-template-rows: auto;
     grid-template-columns: 100%;
   }
   #intereses h3 {
@@ -565,7 +892,7 @@ div {
   #diseno2 img,
   #diseno3 img {
     width: 100%;
-    height: 50vh;
+    height: 60vh;
     object-fit: cover;
     background-size: cover;
     background-position: center;
@@ -575,6 +902,7 @@ div {
     grid-area: portafolio;
     background-color: azure;
     width: 100%;
+    height: auto;
     display: grid;
     grid-template-areas:
       "titPortafolio"
@@ -585,7 +913,7 @@ div {
       "contDiseno3"
       "diseno3"
       "fondo";
-    grid-template-rows: 10vh 50vh 50vh 50vh 50vh 50vh 50vh 80vh;
+    grid-template-rows: auto;
     grid-template-columns: 100%;
     font-size: 30px;
   }
@@ -597,7 +925,7 @@ div {
     border: black;
     border-style: solid;
     width: 100%;
-    height: 100vh;
+    height: auto;
   }
   #diseno1 {
     grid-area: diseno1;
