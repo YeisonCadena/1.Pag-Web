@@ -2,19 +2,9 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Georgia", serif;
 }
-.border {
-  border: solid bisque;
-}
-h2 {
-  color: chocolate;
-  font-size: 40px;
-}
-h1 {
-  color: chocolate;
-  font-weight: bold;
-  font-size: 70px;
-}
+
 img {
   width: 80%;
   height: 80%;
@@ -31,26 +21,32 @@ div {
   text-align: center;
   /* background-color: beige; */
 }
-@media (max-width: 431px) {
+
+@media (max-width: 1025px) {
   a {
     cursor: pointer;
   }
-
-  border {
-    border: solid black;
+  h1 {
+    color: chocolate;
+    font-weight: bold;
+    font-size: 60px;
+  }
+  h2 {
+    color: chocolate;
+    font-size: 30px;
   }
   body {
     display: grid;
     width: 100%;
-    min-height: 900vh;
+    height: 433vh;
     grid-template-areas:
       "header"
       "inicio"
       "skills"
       "portafolio"
       "footer";
-    grid-template-rows: 5vh 250vh 200vh 390vh 20vh;
-    grid-template-columns: auto 100%;
+    grid-template-rows: 5vh 90vh 160vh 120vh 5vh;
+    grid-template-columns: 100%;
   }
 
   #redes {
@@ -59,19 +55,20 @@ div {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-evenly;
-    align-items: center; /*secundario*/
+    align-items: center;
     align-content: center;
     row-gap: 10px;
   }
+
   #lenguajes {
     grid-area: lenguajes;
     width: 100%;
-    height: 50vh;
+    height: 20vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items: center; /*secundario*/
+    align-items: center;
     align-content: center;
   }
   .child {
@@ -81,15 +78,16 @@ div {
 
   #inicio {
     grid-area: inicio;
+    background-color: aliceblue;
     display: grid;
     width: 100%;
-    height: 250vh;
+    height: 90vh;
     grid-template-areas:
       "imgSection imgSection"
       "nombre imgPresent"
       "descrip descrip"
       "habilidad puntos";
-    grid-template-rows: 50vh 45vh 100vh 55vh;
+    grid-template-rows: 15vh 25vh 25vh 25vh;
     grid-template-columns: 50% 50%;
   }
 
@@ -133,32 +131,44 @@ div {
   }
 
   #imgSection {
+    width: 100%;
     grid-area: imgSection;
   }
 
   #imgPresent {
+    width: 100%;
+    height: 25vh;
     grid-area: imgPresent;
     background-color: aliceblue;
+  }
+  #imgPresent img {
+    width: 50%;
+    height: 20vh;
   }
   .imgRadius {
     border-radius: 40%;
   }
   #nombre {
+    width: 100%;
     grid-area: nombre;
-    justify-content: space-evenly;
     align-content: center;
     background-color: aliceblue;
   }
   #descrip {
+    background-color: aliceblue;
     grid-area: descrip;
-    font-size: 45px;
+    font-size: 35px;
   }
   #habilidad {
+    background-color: aliceblue;
     grid-area: habilidad;
+  }
+  #habilidad img {
+    width: 50%;
   }
   #puntos {
     grid-area: puntos;
-    font-size: 40px;
+    font-size: 35px;
     text-align: left;
   }
 
@@ -177,7 +187,7 @@ div {
       "programar"
       "lenguajes"
       "intereses";
-    grid-template-rows: 50vh;
+    grid-template-rows: 25vh 20vh 110vh;
     grid-template-columns: 100%;
   }
 
@@ -195,8 +205,327 @@ div {
       "titCine contCine"
       "titJuegos contJuegos"
       "duelo duelo";
-    grid-template-rows: 10vh 30vh 30vh 30vh 40vh;
+    grid-template-rows: 10vh 25vh 25vh 25vh 25vh;
     grid-template-columns: 50% 50%;
+  }
+
+  #intereses h3 {
+    color: blueviolet;
+    font-size: 30px;
+  }
+  #intereses p {
+    font-size: 20px;
+  }
+  #titIntereses {
+    grid-area: titIntereses;
+  }
+  #titIntereses h2 {
+    font-size: 50px;
+  }
+  #titTec {
+    grid-area: titTec;
+  }
+  #contTec {
+    grid-area: contTec;
+  }
+  #titCine {
+    grid-area: titCine;
+  }
+  #contCine {
+    grid-area: contCine;
+  }
+  #titJuegos {
+    grid-area: titJuegos;
+  }
+  #contJuegos {
+    grid-area: contJuegos;
+  }
+  #duelo {
+    grid-area: duelo;
+    font-size: 25px;
+  }
+  #duelo img{
+    height: 20vh;
+  }
+  #diseno1 img,
+  #diseno2 img,
+  #diseno3 img {
+    width: 80%;
+    height: 20vh;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #portafolio {
+    grid-area: portafolio;
+    /* background-color: azure; */
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+      "titPortafolio titPortafolio"
+      "contDiseno1 diseno1"
+      "contDiseno2 diseno2"
+      "contDiseno3 diseno3"
+      "fondo fondo";
+    grid-template-rows: 10vh 25vh 25vh 25vh 30vh;
+    grid-template-columns: 50% 50%;
+    font-size: 30px;
+  }
+  #fondo {
+    grid-area: fondo;
+  }
+  #fondo img {
+    width: 100%;
+    height: 25vh;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  #titPortafolio {
+    grid-area: titPortafolio;
+    font-size: 25px;
+  }
+
+  #diseno1 {
+    grid-area: diseno1;
+  }
+  #diseno2 {
+    grid-area: diseno2;
+  }
+  #diseno3 {
+    grid-area: diseno3;
+  }
+  #contDiseno1 {
+    font-size: 25px;
+    grid-area: contDiseno1;
+  }
+  #contDiseno2 {
+    font-size: 25px;
+    grid-area: contDiseno2;
+  }
+  #contDiseno3 {
+    font-size: 25px;
+    grid-area: contDiseno3;
+  }
+  footer {
+    grid-area: footer;
+    position: static;
+    background-color: bisque;
+  }
+  .footer-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .child3 {
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .footer-nav a {
+    color: brown;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 431px) {
+  h1 {
+    color: chocolate;
+    font-weight: bold;
+    font-size: 60px;
+  }
+  h2 {
+    color: chocolate;
+    font-size: 30px;
+  }
+  a {
+    cursor: pointer;
+  }
+
+  .border {
+    border: none;
+  }
+  body {
+    display: grid;
+    width: 100%;
+    min-height: 1110vh;
+    grid-template-areas:
+      "header"
+      "inicio"
+      "skills"
+      "portafolio"
+      "footer";
+    grid-template-rows: 5vh 300vh 370vh 390vh auto;
+    grid-template-columns: 100%;
+  }
+
+  #redes {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center; /*secundario*/
+    align-content: center;
+    row-gap: 10px;
+  }
+  #lenguajes {
+    grid-area: lenguajes;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center; /*secundario*/
+    align-content: center;
+  }
+  .child {
+    width: 125px;
+    height: 125px;
+  }
+
+  #imgSection {
+    grid-area: imgSection;
+    width: 100%;
+  }
+
+  #imgPresent {
+    background-color: azure;
+    grid-area: imgPresent;
+    width: 100%;
+    /* background-color: aliceblue; */
+  }
+  #imgPresent img {
+    height: 200px;
+    width: 200px;
+  }
+  .imgRadius {
+    border-radius: 40%;
+  }
+  #nombre {
+    grid-area: nombre;
+    background-color: azure;
+    width: 100%;
+    justify-content: space-evenly;
+    align-content: center;
+    /* background-color: aliceblue; */
+  }
+  #descrip {
+    grid-area: descrip;
+    font-size: 40px;
+    text-align: justify;
+  }
+  #habilidad {
+    grid-area: habilidad;
+  }
+  #puntos {
+    grid-area: puntos;
+    font-size: 40px;
+    text-align: left;
+  }
+
+  #inicio {
+    grid-area: inicio;
+    background-color: azure;
+    display: grid;
+    width: 100%;
+    height: 300vh;
+    grid-template-areas:
+      "imgSection"
+      "imgPresent"
+      "nombre"
+      "descrip"
+      "habilidad"
+      "puntos";
+    grid-template-rows: 50vh;
+    grid-template-columns: 100%;
+  }
+
+  #usuario {
+    grid-area: usuario;
+    width: 5vh;
+    height: 5vh;
+  }
+
+  #inic {
+    grid-area: inic;
+    width: 5vh;
+    height: 5vh;
+  }
+
+  #final {
+    grid-area: final;
+    width: 5vh;
+    height: 5vh;
+  }
+  #titHeader {
+    grid-area: titHeader;
+    width: 100%;
+    height: 5vh;
+  }
+  #titH {
+    color: white;
+  }
+  #header img {
+    width: 5vh;
+    height: 5vh;
+  }
+  header {
+    background-color: whitesmoke;
+    grid-area: header;
+    display: grid;
+    width: 100%;
+    grid-template-areas: "usuario titHeader inic final";
+    position: fixed;
+    grid-template-columns: 20% 60% 10% 10%;
+  }
+
+  #imgSection {
+    grid-area: imgSection;
+    background-image: url("/img/img_code.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #skills {
+    grid-area: skills;
+    background-color: azure;
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+      "programar"
+      "lenguajes"
+      "intereses";
+    grid-template-rows: 60vh 100vh 210vh;
+    grid-template-columns: 100%;
+  }
+
+  #programar {
+    font-size: 35px;
+    grid-area: programar;
+  }
+  #intereses {
+    grid-area: intereses;
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+      "titIntereses"
+      "titTec"
+      "contTec"
+      "titCine"
+      "contCine"
+      "titJuegos"
+      "contJuegos"
+      "duelo";
+    grid-template-rows: 10vh 40vh 10vh 40vh 10vh 40vh 10vh 50vh;
+    grid-template-columns: 100%;
   }
   #intereses h3 {
     color: blueviolet;
@@ -235,7 +564,7 @@ div {
   #diseno1 img,
   #diseno2 img,
   #diseno3 img {
-    width: 150vw;
+    width: 100%;
     height: 50vh;
     object-fit: cover;
     background-size: cover;
@@ -260,11 +589,11 @@ div {
     grid-template-columns: 100%;
     font-size: 30px;
   }
-  #fondo{
+  #fondo {
     grid-area: fondo;
     background-color: aliceblue;
   }
-  #fondo img{
+  #fondo img {
     border: black;
     border-style: solid;
     width: 100%;
@@ -289,14 +618,17 @@ div {
     grid-area: contDiseno3;
   }
   footer {
+    width: 100%;
     grid-area: footer;
-    background-color: bisque;
+    background-color: whitesmoke;
   }
   .footer-nav {
-    display: flex; 
-    flex-direction: row; 
-    justify-content: center; 
-    gap: 15px; 
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
   }
 
   .child3 {
@@ -306,8 +638,7 @@ div {
   }
 
   .footer-nav a {
-    color: brown; 
-    text-decoration: none; 
+    color: brown;
+    text-decoration: none;
   }
-
 }
